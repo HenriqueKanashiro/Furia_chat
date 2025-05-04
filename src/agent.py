@@ -40,7 +40,7 @@ llm = ChatGoogleGenerativeAI(model="gemini-2.0-flash")
 # prompt de contextualização de perguntas
 # Esse system prompt ajuda a IA a entender que deve reformular a pergunta, baseado no histórico de chat para torná-la uma pergunta standalone
 contextualize_q_system_prompt = (
-    "Dada um histórico de conversa e a última pergunta do usuário "
+    "Dado um histórico de conversa e a última pergunta do usuário "
     "que pode referenciar o contexto do histórico da conversa, "
     "formule uma pergunta independente que possa ser compreendida "
     "sem o histórico da conversa. NÃO responda à pergunta, apenas "
