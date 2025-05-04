@@ -17,12 +17,12 @@ print(f"Persistent directory: {persistent_directory}")
 
 # Checar se o Chroma vector store já existe
 if not os.path.exists(persistent_directory):
-    print("Persistent directory does not exist. Initializing vector store...")
+    print("Persistent directory nao existe. Inicializando vector store...")
 
     # Confere se o info_dir existe
     if not os.path.exists(info_dir):
         raise FileNotFoundError(
-            f"The directory {info_dir} does not exist. Please check the path."
+            f"O Diretorio {info_dir} não existe. Reveja o path."
         )
 
     # Lista todos os arquivos de texto no diretório
@@ -44,21 +44,21 @@ if not os.path.exists(persistent_directory):
     docs = text_splitter.split_documents(documents)
 
     # Mostra informações sobre os documentos divididos splitados
-    print("\n--- Document Chunks Information ---")
-    print(f"Number of document chunks: {len(docs)}")
+    print("\n--- Informação das chunks ---")
+    print(f"Numero de chunks : {len(docs)}")
 
     # Cria os embeddings
-    print("\n--- Creating embeddings ---")
+    print("\n--- Criando embeddings ---")
     embeddings = GoogleGenerativeAIEmbeddings(
         model="models/embedding-001"
     )
-    print("\n--- Finished creating embeddings ---")
+    print("\n--- embeddings criados ---")
 
     # Cria o banco vetorizado e salva de forma persistente
-    print("\n--- Creating and persisting vector store ---")
+    print("\n--- Criando e persistindo o vector store ---")
     db = Chroma.from_documents(
         docs, embeddings, persist_directory=persistent_directory)
-    print("\n--- Finished creating and persisting vector store ---")
+    print("\n--- Vector store Criado e persistido ---")
 
 else:
-    print("Vector store already exists. No need to initialize.")
+    print("Vector store ja existe. Sem necessidade de inicialização.")
