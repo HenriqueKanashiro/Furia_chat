@@ -2,7 +2,7 @@
 name = "chat_furia"
 version = "0.1.0"
 description = "LangChain"
-authors = ["bhancock_ai <brandon@brandonhancock.io>"]
+authors = ["henriquekanashiro <henrique.zoppello@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = ">=3.10.0,<3.12"
