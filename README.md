@@ -28,7 +28,7 @@ Abaixo, a visão geral da arquitetura:
 
 ||
 |:-:|
-|<img src="fluxo.png" width=60%>|
+|<img src="assets/fluxo.png" width=60%>|
 
 A arquitetura final da solução pode ser descrita da seguinte forma:
 
