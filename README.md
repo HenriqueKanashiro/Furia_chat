@@ -197,6 +197,7 @@ if __name__ == "__main__":
 
 ### pre-requisitos
 Python 3.10 or 3.11
+
 Poetry [Tutorial de instalação do poetry](https://python-poetry.org/docs/#installing-with-pipx)
 
 ### Clone o repositório
