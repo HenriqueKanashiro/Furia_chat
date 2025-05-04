@@ -192,3 +192,24 @@ Garante que este bloco so inicie quando o arquivo for executado diretamente
 ```python
 if __name__ == "__main__":
 ```
+
+## 5.Como executar o projeto
+
+### pre-requisitos
+Python 3.10 or 3.11
+Poetry [Tutorial de instalação do poetry](https://python-poetry.org/docs/#installing-with-pipx)
+
+### Clone o repositório
+```bash
+git clone https://github.com/HenriqueKanashiro/Furia_chat.git
+cd Furia_chat
+```
+### Instale as dependencias do poetry e ative o poetry shell para rodar o código
+```bash
+poetry install --no-root
+poetry shell
+```
+### Inicie o bot
+```bash
+python src/agent.py
+```
